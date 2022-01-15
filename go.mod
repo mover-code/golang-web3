@@ -6,8 +6,6 @@ replace github.com/btcsuite/btcutil => github.com/btcsuite/btcutil v1.0.2
 
 replace github.com/btcsuite/btcd => github.com/btcsuite/btcd v0.22.0-beta
 
-replace github.com/mover-code/golang-web3/fastrlp => ./fastrlp
-
 require (
 	github.com/boltdb/bolt v1.3.1
 	github.com/btcsuite/btcd v0.20.1-beta
@@ -16,7 +14,6 @@ require (
 	github.com/jmoiron/sqlx v1.3.4
 	github.com/lib/pq v1.10.4
 	github.com/mitchellh/mapstructure v1.4.3
-	github.com/mover-code/golang-web3/fastrlp v0.0.0-00010101000000-000000000000
 	github.com/ory/dockertest v3.3.5+incompatible
 	github.com/stretchr/testify v1.7.0
 	github.com/tyler-smith/go-bip39 v1.1.0
