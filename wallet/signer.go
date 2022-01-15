@@ -5,7 +5,7 @@ import (
 
 	web3 "github.com/mover-code/golang-web3"
 
-	"eth/fastrlp"
+	"github.com/mover-code/golang-web3/fastrlp"
 )
 
 type Signer interface {

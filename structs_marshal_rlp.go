@@ -1,6 +1,6 @@
 package web3
 
-import "eth/fastrlp"
+import "github.com/mover-code/golang-web3/fastrlp"
 
 func (t *Transaction) MarshalRLP() []byte {
 	ar := fastrlp.DefaultArenaPool.Get()

@@ -1,4 +1,4 @@
-module eth/fastrlp
+module github.com/mover-code/golang-web3/fastrlp
 
 go 1.17
 

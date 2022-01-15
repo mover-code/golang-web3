@@ -1,7 +1,7 @@
 package jsonrpc
 
 import (
-	"eth/go-web3"
+	"github.com/mover-code/golang-web3"
 	"strings"
 	"testing"
 	"time"
