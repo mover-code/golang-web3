@@ -3,7 +3,7 @@ package ens
 import (
 	"strings"
 
-	web3 "eth/go-web3"
+	web3 "github.com/mover-code/golang-web3"
 
 	"golang.org/x/crypto/sha3"
 )

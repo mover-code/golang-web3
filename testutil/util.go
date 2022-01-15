@@ -1,10 +1,9 @@
 package testutil
 
 import (
+	"eth/go-web3"
 	"math/big"
 	"reflect"
-
-	"eth/go-web3"
 )
 
 func CompareLogs(one, two []*web3.Log) bool {

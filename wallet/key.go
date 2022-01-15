@@ -4,7 +4,6 @@ import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
-
 	"eth/go-web3"
 
 	"github.com/btcsuite/btcd/btcec"

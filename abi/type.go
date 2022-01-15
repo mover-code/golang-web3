@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"eth/go-web3"
+	"github.com/mover-code/golang-web3"
 )
 
 // batch of predefined reflect types

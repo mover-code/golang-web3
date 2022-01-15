@@ -15,12 +15,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	web3 "eth/go-web3"
-	"eth/go-web3/blocktracker"
-	"eth/go-web3/etherscan"
-	"eth/go-web3/jsonrpc/codec"
-	"eth/go-web3/tracker/store"
-	"eth/go-web3/tracker/store/inmem"
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/blocktracker"
+	"github.com/mover-code/golang-web3/etherscan"
+	"github.com/mover-code/golang-web3/jsonrpc/codec"
+	"github.com/mover-code/golang-web3/tracker/store"
+	"github.com/mover-code/golang-web3/tracker/store/inmem"
 )
 
 var (

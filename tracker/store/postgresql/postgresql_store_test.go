@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/mover-code/golang-web3/tracker/store"
 	"github.com/ory/dockertest"
-	"eth/go-web3/tracker/store"
 )
 
 func setupDB(t *testing.T) (store.Store, func()) {

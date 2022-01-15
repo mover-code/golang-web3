@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"math/big"
 
-	web3 "eth/go-web3"
-	"eth/go-web3/contract"
-	"eth/go-web3/jsonrpc"
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/contract"
+	"github.com/mover-code/golang-web3/jsonrpc"
 )
 
 var (
@@ -58,7 +58,7 @@ func (r *Resolver) ABI(node [32]byte, contentTypes *big.Int, block ...web3.Block
 		err = fmt.Errorf("failed to encode output at index 1")
 		return
 	}
-	
+
 	return
 }
 
@@ -78,7 +78,7 @@ func (r *Resolver) Addr(node [32]byte, block ...web3.BlockNumber) (retval0 web3.
 		err = fmt.Errorf("failed to encode output at index 0")
 		return
 	}
-	
+
 	return
 }
 
@@ -98,7 +98,7 @@ func (r *Resolver) Content(node [32]byte, block ...web3.BlockNumber) (retval0 [3
 		err = fmt.Errorf("failed to encode output at index 0")
 		return
 	}
-	
+
 	return
 }
 
@@ -118,7 +118,7 @@ func (r *Resolver) Name(node [32]byte, block ...web3.BlockNumber) (retval0 strin
 		err = fmt.Errorf("failed to encode output at index 0")
 		return
 	}
-	
+
 	return
 }
 
@@ -143,7 +143,7 @@ func (r *Resolver) Pubkey(node [32]byte, block ...web3.BlockNumber) (retval0 [32
 		err = fmt.Errorf("failed to encode output at index 1")
 		return
 	}
-	
+
 	return
 }
 
@@ -163,7 +163,7 @@ func (r *Resolver) SupportsInterface(interfaceID [4]byte, block ...web3.BlockNum
 		err = fmt.Errorf("failed to encode output at index 0")
 		return
 	}
-	
+
 	return
 }
 

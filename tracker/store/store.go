@@ -1,6 +1,6 @@
 package store
 
-import web3 "eth/go-web3"
+import web3 "github.com/mover-code/golang-web3"
 
 // Store is a datastore for the tracker
 type Store interface {

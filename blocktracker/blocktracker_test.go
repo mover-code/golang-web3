@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	web3 "eth/go-web3"
-	"eth/go-web3/jsonrpc"
-	"eth/go-web3/testutil"
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/jsonrpc"
+	"github.com/mover-code/golang-web3/testutil"
 )
 
 func testListener(t *testing.T, server *testutil.TestServer, tracker BlockTrackerInterface) {

@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"eth/go-web3/jsonrpc/codec"
+	"github.com/mover-code/golang-web3/jsonrpc/codec"
 
 	"github.com/gorilla/websocket"
 )

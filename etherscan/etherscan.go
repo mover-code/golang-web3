@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"eth/go-web3"
-	"eth/go-web3/jsonrpc/codec"
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/jsonrpc/codec"
 
 	"github.com/valyala/fasthttp"
 )

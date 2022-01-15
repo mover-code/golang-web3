@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"eth/go-web3"
+	"github.com/mover-code/golang-web3"
 )
 
 // ParseLog parses an event log

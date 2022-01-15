@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"eth/go-web3/compiler"
+	"github.com/mover-code/golang-web3/compiler"
 
 	"golang.org/x/crypto/sha3"
 )

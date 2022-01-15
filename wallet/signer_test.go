@@ -1,11 +1,11 @@
 package wallet
 
 import (
+	"eth/go-web3"
 	"math/big"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"eth/go-web3"
 )
 
 func TestSigner_EIP1155(t *testing.T) {

@@ -3,8 +3,8 @@ package jsonrpc
 import (
 	"testing"
 
+	"github.com/mover-code/golang-web3/testutil"
 	"github.com/stretchr/testify/assert"
-	"eth/go-web3/testutil"
 )
 
 func TestNetVersion(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"eth/go-web3/abi"
+	"github.com/mover-code/golang-web3/abi"
 )
 
 var abiTestdata *abi.ABI

@@ -12,7 +12,7 @@ import (
 
 	"path/filepath"
 
-	"eth/go-web3/compiler"
+	"github.com/mover-code/golang-web3/compiler"
 )
 
 const (

@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"testing"
 
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/jsonrpc"
+	"github.com/mover-code/golang-web3/testutil"
+	"github.com/mover-code/golang-web3/wallet"
 	"github.com/stretchr/testify/assert"
-	"eth/go-web3"
-	"eth/go-web3/jsonrpc"
-	"eth/go-web3/testutil"
-	"eth/go-web3/wallet"
 )
 
 func TestSendSignedTransaction(t *testing.T) {

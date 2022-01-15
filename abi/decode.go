@@ -7,8 +7,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"eth/go-web3"
-
+	"github.com/mover-code/golang-web3"
 	"github.com/mitchellh/mapstructure"
 )
 

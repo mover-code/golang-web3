@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"eth/go-web3"
+	web3 "github.com/mover-code/golang-web3"
 )
 
 type mockCall int

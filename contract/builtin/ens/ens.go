@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"math/big"
 
-	web3 "eth/go-web3"
-	"eth/go-web3/contract"
-	"eth/go-web3/jsonrpc"
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/contract"
+	"github.com/mover-code/golang-web3/jsonrpc"
 )
 
 var (
@@ -53,7 +53,7 @@ func (e *ENS) Owner(node [32]byte, block ...web3.BlockNumber) (retval0 web3.Addr
 		err = fmt.Errorf("failed to encode output at index 0")
 		return
 	}
-	
+
 	return
 }
 
@@ -73,7 +73,7 @@ func (e *ENS) Resolver(node [32]byte, block ...web3.BlockNumber) (retval0 web3.A
 		err = fmt.Errorf("failed to encode output at index 0")
 		return
 	}
-	
+
 	return
 }
 
@@ -93,7 +93,7 @@ func (e *ENS) Ttl(node [32]byte, block ...web3.BlockNumber) (retval0 uint64, err
 		err = fmt.Errorf("failed to encode output at index 0")
 		return
 	}
-	
+
 	return
 }
 

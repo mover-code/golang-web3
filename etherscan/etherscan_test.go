@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
+	web3 "github.com/mover-code/golang-web3"
 	"github.com/stretchr/testify/assert"
-	"eth/go-web3"
 )
 
 func testEtherscanMainnet(t *testing.T) *Etherscan {

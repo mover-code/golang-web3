@@ -3,7 +3,7 @@ package inmem
 import (
 	"testing"
 
-	"eth/go-web3/tracker/store"
+	"github.com/mover-code/golang-web3/tracker/store"
 )
 
 func TestInMemoryStore(t *testing.T) {

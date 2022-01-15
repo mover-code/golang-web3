@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"eth/go-web3"
-	"eth/go-web3/abi"
-	"eth/go-web3/jsonrpc"
+	"github.com/mover-code/golang-web3/jsonrpc"
+
+	"github.com/mover-code/golang-web3/abi"
+
+	web3 "github.com/mover-code/golang-web3"
 )
 
 // Contract is an Ethereum contract

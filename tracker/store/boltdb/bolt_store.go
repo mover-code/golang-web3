@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"eth/go-web3"
-	"eth/go-web3/tracker/store"
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/tracker/store"
 
 	"github.com/boltdb/bolt"
 )

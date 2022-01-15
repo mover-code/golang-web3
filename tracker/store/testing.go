@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	web3 "eth/go-web3"
+	web3 "github.com/mover-code/golang-web3"
 )
 
 // SetupDB is a function that creates a backend

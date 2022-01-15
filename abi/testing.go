@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strings"
 
-	"eth/go-web3"
+	"github.com/mover-code/golang-web3"
 )
 
 func randomInt(min, max int) int {

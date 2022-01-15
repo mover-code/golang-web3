@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"eth/go-web3/tracker/store"
+	"github.com/mover-code/golang-web3/tracker/store"
 )
 
 func setupDB(t *testing.T) (store.Store, func()) {

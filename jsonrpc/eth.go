@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"eth/go-web3"
+	web3 "github.com/mover-code/golang-web3"
 )
 
 // Eth is the eth namespace

@@ -15,8 +15,8 @@ import (
 	"testing"
 	"time"
 
-	"eth/go-web3"
-	"eth/go-web3/compiler"
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/compiler"
 
 	"github.com/ory/dockertest"
 	"golang.org/x/crypto/sha3"

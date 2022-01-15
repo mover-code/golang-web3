@@ -3,14 +3,13 @@ package abi
 import (
 	"bytes"
 	"encoding/json"
+	"github.com/mover-code/golang-web3"
 	"fmt"
 	"hash"
 	"io"
 	"regexp"
 	"strings"
 	"sync"
-
-	"eth/go-web3"
 
 	"golang.org/x/crypto/sha3"
 )

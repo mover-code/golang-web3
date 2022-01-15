@@ -6,6 +6,10 @@ replace github.com/btcsuite/btcutil => github.com/btcsuite/btcutil v1.0.2
 
 replace github.com/btcsuite/btcd => github.com/btcsuite/btcd v0.22.0-beta
 
+require eth/fastrlp v0.0.0
+
+replace eth/fastrlp => ./fastrlp
+
 require (
 	github.com/boltdb/bolt v1.3.1
 	github.com/btcsuite/btcd v0.20.1-beta

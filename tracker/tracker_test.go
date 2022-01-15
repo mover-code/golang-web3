@@ -10,14 +10,14 @@ import (
 	"testing"
 	"time"
 
+	web3 "github.com/mover-code/golang-web3"
+	"github.com/mover-code/golang-web3/abi"
+	"github.com/mover-code/golang-web3/blocktracker"
+	"github.com/mover-code/golang-web3/jsonrpc"
+	"github.com/mover-code/golang-web3/jsonrpc/codec"
+	"github.com/mover-code/golang-web3/testutil"
+	"github.com/mover-code/golang-web3/tracker/store/inmem"
 	"github.com/stretchr/testify/assert"
-	web3 "eth/go-web3"
-	"eth/go-web3/abi"
-	"eth/go-web3/blocktracker"
-	"eth/go-web3/jsonrpc"
-	"eth/go-web3/jsonrpc/codec"
-	"eth/go-web3/testutil"
-	"eth/go-web3/tracker/store/inmem"
 )
 
 func testConfig() ConfigOption {
