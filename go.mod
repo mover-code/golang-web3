@@ -10,13 +10,14 @@ require (
 	github.com/boltdb/bolt v1.3.1
 	github.com/btcsuite/btcd v0.22.0-beta
 	github.com/btcsuite/btcutil v1.0.3-0.20201208143702-a53e38424cce
+	github.com/ethereum/go-ethereum v1.10.26
 	github.com/gorilla/websocket v1.4.2
 	github.com/jmoiron/sqlx v1.3.4
 	github.com/lib/pq v1.10.4
 	github.com/mitchellh/mapstructure v1.4.3
 	github.com/mover-code/golang-web3/fastrlp v0.0.0-20220115090634-40266d3f33e2
 	github.com/ory/dockertest v3.3.5+incompatible
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.2
 	github.com/tyler-smith/go-bip39 v1.1.0
 	github.com/valyala/fasthttp v1.32.0
 	github.com/valyala/fastjson v1.6.3
@@ -42,8 +43,8 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
-	golang.org/x/sys v0.0.0-20211116061358-0a5406a5449c // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	golang.org/x/net v0.0.0-20220607020251-c690dde0001d // indirect
+	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gotest.tools v2.2.0+incompatible // indirect
 )

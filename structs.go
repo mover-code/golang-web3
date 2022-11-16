@@ -4,6 +4,8 @@ import (
 	"encoding/hex"
 	"fmt"
 	"math/big"
+
+	"github.com/ethereum/go-ethereum/common"
 )
 
 var (
@@ -47,6 +49,10 @@ func (a Address) MarshalText() ([]byte, error) {
 
 func (a Address) String() string {
 	return "0x" + hex.EncodeToString(a[:])
+}
+
+func (a Address) CheckSum() string {
+	return common.HexToAddress(a.String()).Hex()
 }
 
 // Hash is an Ethereum hash

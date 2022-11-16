@@ -15,9 +15,10 @@ type (
     LoadWrapper func(d interface{}, v map[string]interface{})
 
     MyContract struct {
-        Addr     string
-        Contract *contract.Contract
-        Cli      *jsonrpc.Client
+        Addr         string
+        Contract     *contract.Contract
+        Cli          *jsonrpc.Client
+        TimeDuration int64 // after some time do it
     }
 )
 
@@ -104,7 +105,7 @@ func (d *MyContract) GetLogs(wrapper LoadWrapper, name ...interface{}) {
         old := *f.To
         f.SetFromUint64(uint64(old))
         for {
-            time.Sleep(time.Second * 3)
+            time.Sleep(time.Second * time.Duration(d.TimeDuration))
             now := d.NowBlock()
             if now > old {
                 logs, err := d.Cli.Eth().GetLogs(f)
@@ -134,7 +135,7 @@ func (d *MyContract) GetHistoryLogs(start, step int64, wrapper LoadWrapper, name
     stop := false
     block := d.NowBlock()
     for {
-        time.Sleep(time.Second)
+        time.Sleep(time.Millisecond * time.Duration(d.TimeDuration))
         if start < int64(block) {
             newBlock := start + step
             if newBlock > int64(block) {
@@ -146,7 +147,7 @@ func (d *MyContract) GetHistoryLogs(start, step int64, wrapper LoadWrapper, name
             logs, err := d.Cli.Eth().GetLogs(f)
             if err == nil && len(logs) > 0 {
                 for _, l := range logs {
-                    d.ParseLogWithWrapper(l,wrapper, name...)
+                    d.ParseLogWithWrapper(l, wrapper, name...)
                 }
             }
             start = newBlock
@@ -155,4 +156,10 @@ func (d *MyContract) GetHistoryLogs(start, step int64, wrapper LoadWrapper, name
             break
         }
     }
+}
+
+// A function that is used to call the contract method.
+func (d *MyContract) Call(method string, param ...interface{}) (interface{}, error) {
+    time.Sleep(time.Millisecond * time.Duration(d.TimeDuration))
+    return d.Contract.Call(method, d.NowBlock(), param...)
 }
