@@ -135,6 +135,11 @@ func (e *Eth) SendRawTransaction(data []byte) (web3.Hash, error) {
 	return hash, err
 }
 
+// Calling the `SendRawTransaction` function with the `txn.MarshalRLP()` as the argument.
+func (e *Eth) SenSignTransaction(txn *web3.Transaction) (web3.Hash, error) {
+	return e.SendRawTransaction(txn.MarshalRLP())
+}
+
 // SendTransaction creates new message call transaction or a contract creation.
 func (e *Eth) SendTransaction(txn *web3.Transaction) (web3.Hash, error) {
 	var hash web3.Hash

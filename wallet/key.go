@@ -4,9 +4,9 @@ import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
-	"github.com/mover-code/golang-web3"
 
 	"github.com/btcsuite/btcd/btcec"
+	web3 "github.com/mover-code/golang-web3"
 	"golang.org/x/crypto/sha3"
 )
 
@@ -98,4 +98,8 @@ func keccak256(buf []byte) []byte {
 	h.Write(buf)
 	b := h.Sum(nil)
 	return b
+}
+
+func Keccake256(buf []byte) []byte {
+	return keccak256(buf)
 }

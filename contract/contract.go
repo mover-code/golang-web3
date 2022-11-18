@@ -143,14 +143,38 @@ type Txn struct {
 }
 
 func (t *Txn) MarshalTrans() *web3.Transaction {
+	err := t.Validate()
+	if err != nil {
+		return nil
+	}
+
+	// estimate gas price
+	if t.gasPrice == 0 {
+		t.gasPrice, err = t.provider.Eth().GasPrice()
+		if err != nil {
+			return nil
+		}
+	}
+	// estimate gas limit
+	if t.gasLimit == 0 {
+		t.gasLimit, err = t.estimateGas()
+		if err != nil {
+			return nil
+		}
+	}
+
+	block, _ := t.provider.Eth().BlockNumber()
+	nonce, _ := t.provider.Eth().GetNonce(t.from, web3.BlockNumber(int64(block)))
 	return &web3.Transaction{
-		From:     t.from,
-		To:       t.addr,
-		Hash:     t.hash,
-		Gas:      t.gasLimit,
-		GasPrice: t.gasPrice,
-		Value:    t.value,
-		Input:    t.data,
+		From:        t.from,
+		To:          t.addr,
+		Hash:        t.hash,
+		Gas:         t.gasLimit,
+		GasPrice:    t.gasPrice,
+		Value:       t.value,
+		Input:       t.data,
+		BlockNumber: block,
+		Nonce:       nonce,
 	}
 }
 

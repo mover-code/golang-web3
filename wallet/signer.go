@@ -91,3 +91,26 @@ func encodeSignature(R, S []byte, V byte) ([]byte, error) {
 	sig[64] = V
 	return sig, nil
 }
+
+// It encodes the signature of a transaction.
+//
+// Args:
+//   R ([]byte): The X coordinate of a point R on the curve
+//   S ([]byte): the signature
+//   V (byte): The recovery ID.
+func EncodeSignature(R, S []byte, V byte) ([]byte, error) {
+	return encodeSignature(R, S, V)
+}
+
+// It takes a signature and a chainID and returns the R, S, and V values of the signature.
+//
+// Args:
+//   sig ([]byte): the signature
+//   chainID (uint64): The chain ID of the network you're signing for.
+func DecodeSignature(sig []byte, chainID uint64) (R, S, V []byte) {
+	vv := uint64(sig[64]) + 35 + chainID*2
+	R = sig[:32]
+	S = sig[32:64]
+	V = new(big.Int).SetUint64(vv).Bytes()
+	return
+}
