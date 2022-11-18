@@ -17,6 +17,7 @@ require (
 	github.com/mitchellh/mapstructure v1.4.3
 	github.com/mover-code/golang-web3/fastrlp v0.0.0-20220115090634-40266d3f33e2
 	github.com/ory/dockertest v3.3.5+incompatible
+	github.com/shopspring/decimal v1.3.1
 	github.com/stretchr/testify v1.7.2
 	github.com/tyler-smith/go-bip39 v1.1.0
 	github.com/valyala/fasthttp v1.32.0
