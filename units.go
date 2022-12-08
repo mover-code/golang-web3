@@ -2,7 +2,7 @@
  * @Author: small_ant xms.chnb@gmail.com
  * @Time: 2022-01-15 13:50:16
  * @LastAuthor: small_ant xms.chnb@gmail.com
- * @lastTime: 2022-11-18 16:49:13
+ * @lastTime: 2022-12-08 14:14:42
  * @FileName: units
  * @Desc:
  *
@@ -11,11 +11,14 @@
 package web3
 
 import (
+	"fmt"
 	"math/big"
 	"strconv"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/ethereum/go-ethereum/crypto"
+
 	"github.com/shopspring/decimal"
 )
 
@@ -125,4 +128,48 @@ func ToWei(iamount interface{}, decimals int) *big.Int {
 	wei.SetString(result.String(), 10)
 
 	return wei
+}
+
+// It takes a byte array, and returns a byte array
+//
+// Args:
+//   buf ([]byte): The data to be hashed.
+//
+// Returns:
+//   The hash of the input buffer.
+func Keccak256(buf []byte) []byte {
+	return crypto.Keccak256(buf)
+}
+
+// It takes a byte array, converts it to a string, prepends a string to it, and then hashes the result
+//
+// Args:
+//   data ([]byte): The data to sign.
+//
+// Returns:
+//   The hash of the message.
+func SignHash(data []byte) []byte {
+	msg := fmt.Sprintf("\x19Ethereum Signed Message:\n%d%s", len(data), data)
+	return Keccak256([]byte(msg))
+}
+
+// It takes a string and returns a byte array
+//
+// Args:
+//   data (string): The data to sign.
+//
+// Returns:
+//   The return value is a byte array.
+func SignString(data string) []byte {
+	msg := fmt.Sprintf("\x19Ethereum Signed Message:\n%d", 32)
+	return []byte(msg)
+}
+
+// It takes a variable number of byte slices and returns a single byte slice
+// 
+// Returns:
+//   The hash of the data.
+func Keccak256HashData(data ...[]byte) []byte {
+	h := crypto.Keccak256Hash(data...)
+	return h.Bytes()
 }
