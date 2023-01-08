@@ -1,22 +1,12 @@
-<!--
- * @Author: small_ant xms.chnb@gmail.com
- * @Time: 2022-01-15 13:50:16
- * @LastAuthor: small_ant xms.chnb@gmail.com
- * @lastTime: 2022-12-08 14:33:47
- * @FileName: readme
- * @Desc: 
- * 
- * Copyright (c) 2022 by small_ant xms.chnb@gmail.com, All Rights Reserved. 
--->
 # golang-web3
 
 ## install
 
 ```shell
-go get -u https://github.com/mover-code/golang-web3.git
+go get -u github.com/mover-code/golang-web3.git@latest
 ```
 
-> 导入包时go.mod 下增加 replace github.com/btcsuite/btcutil => github.com/btcsuite/btcutil v1.0.2
+> go get -u github.com/btcsuite/btcd@v0.22.0-beta 遇到ambiguous import
 
 ## desc
 
