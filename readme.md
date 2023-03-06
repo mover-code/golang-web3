@@ -93,6 +93,22 @@ func NewCli(url string) *jsonrpc.Client {
     r,s,v := SignRSV(signature) // 签名后的rsv数据
 ```
 
+- 验证签名信息示例
+
+```go
+func VerifySig(msg, from, sigHex string) bool {
+
+    sig := hexutil.MustDecode(sigHex)
+    if sig[64] != 27 && sig[64] != 28 {
+        return false
+    }
+    sig[64] -= 27
+
+    addr, _ := wallet.Ecrecover(web3.SignHash([]byte(msg)), sig)
+    return addr == web3.HexToAddress(from)
+}
+```
+
 - 代币转账示例 主币
 
 ```go
