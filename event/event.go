@@ -1,18 +1,18 @@
 package event
 
 import (
-	"fmt"
-	"reflect"
-	"time"
+    "fmt"
+    "reflect"
+    "time"
 
-	web3 "github.com/mover-code/golang-web3"
-	"github.com/mover-code/golang-web3/abi"
-	"github.com/mover-code/golang-web3/contract"
-	"github.com/mover-code/golang-web3/jsonrpc"
+    web3 "github.com/mover-code/golang-web3"
+    "github.com/mover-code/golang-web3/abi"
+    "github.com/mover-code/golang-web3/contract"
+    "github.com/mover-code/golang-web3/jsonrpc"
 )
 
 type (
-    LoadWrapper func(d interface{}, v map[string]interface{})
+    LoadWrapper func(d interface{}, v map[string]interface{}, l *web3.Log)
 
     MyContract struct {
         Addr         string
@@ -66,7 +66,7 @@ func (d *MyContract) ParseLogWithWrapper(l *web3.Log, wrapper LoadWrapper, name 
         if e, b := d.Contract.Event(reflect.TypeOf(n).Name()); b {
             data, err := e.ParseLog(l)
             if err == nil {
-                wrapper(n, data)
+                wrapper(n, data, l)
             }
         }
     }
